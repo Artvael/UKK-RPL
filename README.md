@@ -124,6 +124,13 @@ erDiagram
 
 Semua berkas tangkapan layar tersimpan pada folder [`screenshots/`](screenshots/):
 
+### 0. Bukti Eksekusi Server & Database MySQL (Kriteria 1 & 2)
+| Project Laravel Berhasil Dijalankan (`php artisan serve`) | Database MySQL Berhasil Dibuat (`peminjaman_barang`) |
+| :---: | :---: |
+| ![Server Running](screenshots/00_laravel_server_running.png) | ![Database MySQL](screenshots/00_database_mysql_phpmyadmin.png) |
+
+---
+
 ### 1. Autentikasi & Registrasi
 | Halaman Login (1-Click Demo) | Halaman Registrasi Akun Siswa |
 | :---: | :---: |

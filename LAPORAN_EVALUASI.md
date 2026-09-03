@@ -30,9 +30,13 @@ Sesuai dengan lembar instrumen ujian praktik UKK RPL, berikut adalah hasil eksek
 
 Seluruh tangkapan layar antarmuka sistem dan pengujian telah disimpan di folder `screenshots/`:
 
+### 0. Bukti Eksekusi Server & Database MySQL (Kriteria 1 & 2)
+1. `00_laravel_server_running.png`: Bukti Project Laravel Berhasil Dijalankan (`php artisan serve` di port 8000).
+2. `00_database_mysql_phpmyadmin.png`: Bukti Database MySQL `peminjaman_barang` Berhasil Dibuat di phpMyAdmin.
+
 ### A. Antarmuka Autentikasi & Landing
-1. `01_halaman_login.png`: Halaman Login dengan tombol *1-Click Demo Credentials*.
-2. `02_halaman_register.png`: Formulir Pendaftaran Akun Siswa/Peminjam Mandiri.
+3. `01_halaman_login.png`: Halaman Login dengan tombol *1-Click Demo Credentials*.
+4. `02_halaman_register.png`: Formulir Pendaftaran Akun Siswa/Peminjam Mandiri.
 
 ### B. Antarmuka Administrator
 3. `03_dashboard_admin.png`: Dashboard Utama Admin (Statistik KPI, Grafik, Antrean Peminjaman, Log Terkini).
