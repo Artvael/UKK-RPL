@@ -102,8 +102,8 @@ class PeminjamanController extends Controller
         $rules = [
             'id_alat' => ['required', 'exists:alats,id_alat'],
             'jumlah_pinjam' => ['required', 'integer', 'min:1'],
-            'tgl_pinjam' => ['required', 'date', 'after_or_equal:today'],
-            'tgl_kembali_rencana' => ['required', 'date', 'after_or_equal:tgl_pinjam'],
+            'tgl_pinjam' => ['required', 'date'],
+            'tgl_kembali_rencana' => ['required', 'date'],
             'catatan_peminjam' => ['nullable', 'string', 'max:500'],
         ];
 

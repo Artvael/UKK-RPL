@@ -138,21 +138,23 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // 6. Transaksi Peminjaman Contoh
+        // Transaksi 1: Sedang Dipinjam & Melewati Batas (Untuk Uji Coba Pengembalian & Denda Keterlambatan)
         Peminjaman::create([
-            'kode_peminjaman' => 'PINJAM-20260216-001',
+            'kode_peminjaman' => 'PINJAM-20260828-001',
             'user_id' => $siswa1->id,
             'id_alat' => $alat1->id_alat,
             'jumlah_pinjam' => 1,
-            'tgl_pinjam' => Carbon::now()->subDays(2)->format('Y-m-d'),
-            'tgl_kembali_rencana' => Carbon::now()->addDays(1)->format('Y-m-d'),
+            'tgl_pinjam' => Carbon::now()->subDays(6)->format('Y-m-d'),
+            'tgl_kembali_rencana' => Carbon::now()->subDays(3)->format('Y-m-d'),
             'status' => 'Sedang Dipinjam',
             'catatan_peminjam' => 'Untuk presentasi tugas akhir sidang UKK di Aula Lt. 2',
             'catatan_petugas' => 'Kelengkapan kabel power dan HDMI lengkap.',
             'denda' => 0,
         ]);
 
+        // Transaksi 2: Menunggu Konfirmasi (Untuk Uji Coba Approval Petugas)
         Peminjaman::create([
-            'kode_peminjaman' => 'PINJAM-20260216-002',
+            'kode_peminjaman' => 'PINJAM-20260901-002',
             'user_id' => $siswa2->id,
             'id_alat' => $alat3->id_alat,
             'jumlah_pinjam' => 2,
@@ -164,14 +166,15 @@ class DatabaseSeeder extends Seeder
             'denda' => 0,
         ]);
 
+        // Transaksi 3: Sudah Dikembalikan Tepat Waktu (Riwayat Selesai)
         Peminjaman::create([
-            'kode_peminjaman' => 'PINJAM-20260210-003',
+            'kode_peminjaman' => 'PINJAM-20260820-003',
             'user_id' => $siswa1->id,
             'id_alat' => $alat5->id_alat,
             'jumlah_pinjam' => 1,
-            'tgl_pinjam' => Carbon::now()->subDays(6)->format('Y-m-d'),
-            'tgl_kembali_rencana' => Carbon::now()->subDays(4)->format('Y-m-d'),
-            'tgl_kembali_aktual' => Carbon::now()->subDays(4)->format('Y-m-d'),
+            'tgl_pinjam' => Carbon::now()->subDays(12)->format('Y-m-d'),
+            'tgl_kembali_rencana' => Carbon::now()->subDays(10)->format('Y-m-d'),
+            'tgl_kembali_aktual' => Carbon::now()->subDays(10)->format('Y-m-d'),
             'status' => 'Dikembalikan',
             'catatan_peminjam' => 'Pengujian modul power supply komputer',
             'catatan_petugas' => 'Dikembalikan tepat waktu dalam kondisi baik.',
